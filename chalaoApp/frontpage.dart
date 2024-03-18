@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+  import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         body: Container( //root container
           decoration: BoxDecoration(
             image: DecorationImage(
-              image:NetworkImage("https://cdn.pixabay.com/photo/2020/06/11/14/07/yamaha-5286869_1280.jpg"),
+              image:NetworkImage("https://static.vecteezy.com/system/resources/previews/031/596/944/large_2x/relaxing-bike-ride-beneath-the-dark-night-sky-a-peaceful-evening-vertical-mobile-wallpaper-ai-generated-free-photo.jpg"),
               fit: BoxFit.cover,
             ),
           ),
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 //            minHeight: 404, // Minimum height
              ),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.6), // Example background color with opacity
+                color: Colors.white.withOpacity(0.7), // Example background color with opacity
                 borderRadius: BorderRadius.circular(10), // Example border radius
               ),
               child:Container(
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
                    child:Row(
                     mainAxisAlignment:MainAxisAlignment.center,
                     children:[
-                    Text("Welcome to",style:TextStyle(fontSize:20,fontWeight:FontWeight.bold,color:Color.fromRGBO(250,227,34,1))),
+                    Text("Welcome to",style:TextStyle(fontSize:20,fontWeight:FontWeight.bold,color:Color.fromRGBO(219,114,7,1))),
                       SizedBox(width:5),
                  Text("CHALAO",style:TextStyle(fontSize:20,fontWeight:FontWeight.bold,color:Color.fromRGBO(38,80,115,1))) 
                   ])
