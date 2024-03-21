@@ -1,1 +1,79 @@
+import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+        title: Text('Congratulations'),
+        titleSpacing: 50,
+        centerTitle: true,
+        toolbarHeight: 70,
+        toolbarOpacity: 1,
+        elevation: 0,
+        backgroundColor: Colors.green,
+        
+        ),
+        body: Center(
+          child: JourneyCompleteWidget(),
+        ),
+      ),
+    );
+  }
+}
+
+class JourneyCompleteWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(20),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Congratulations!',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 20),
+          Text(
+            'You have completed your journey!',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          SizedBox(height: 20),
+          DataTable(
+            columns: [
+              DataColumn(
+                label: Text('Payment'),
+              ),
+              DataColumn(
+                label: Text('Account Balance'),
+              ),
+            ],
+            rows: [
+              DataRow(
+                cells: [
+                  DataCell(
+                    Text('Paid: 300 units'),
+                  ),
+                  DataCell(
+                    Text('Account: 2700 units'),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
