@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Buy Points'),
+          titleSpacing: 50,
+          centerTitle: true,
+          toolbarHeight: 70,
+          toolbarOpacity: 1,
+          elevation: 0,
+          backgroundColor: Colors.yellow,
+          
+        ),
+        body: Center(
+          child: BuyPointsButton(),
+        ),
+      ),
+    );
+  }
+}
+
+class BuyPointsButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: Color(0xFFFFD600),
+      ),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            '(ID)',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(width: 5),
+          Text(
+            '300',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(width: 5),
+          Text(
+            'Id-a234',
+            style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+          ),
+          Spacer(),
+          Text(
+            'Buy points',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
+    );
+  }
+}
