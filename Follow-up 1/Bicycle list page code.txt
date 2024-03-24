@@ -1,0 +1,64 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Bicycle List'),
+          titleSpacing: 50,
+          centerTitle: true,
+          toolbarHeight: 70,
+          toolbarOpacity: 1,
+          elevation: 0,
+          backgroundColor: Colors.yellow
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: ListView(
+            children: [
+              ListTile(
+                 title: Text('Bike 1'),
+                subtitle: Text('dhanmondi'),
+                leading: CircleAvatar(
+                  child: Text('SL-1'),
+                ),
+              ),
+              ListTile(
+                title: Text('Bike 2'),
+                subtitle: Text('gulsa'),
+                leading: CircleAvatar(
+                  child: Text('SL-2'),
+                ),
+              ),
+              ListTile(
+                title: Text('Bike 3'),
+                subtitle: Text('mohakhali'),
+                leading: CircleAvatar(
+                  child: Text('SL-3'),
+                ),
+              ),
+              ListTile(
+                title: Text('Bicycle List for Stationb 200047'),
+                subtitle: Text('201, 202, 202'),
+                leading: CircleAvatar(   
+                child: Text('CAT'),
+                
+                
+                ),
+                
+                ),
+            
+              
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
