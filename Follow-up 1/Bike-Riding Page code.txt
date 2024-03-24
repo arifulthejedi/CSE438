@@ -1,0 +1,72 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Bike-Riding'),
+          titleSpacing: 50,
+          centerTitle: true,
+          toolbarHeight: 70,
+          toolbarOpacity: 1,
+          elevation: 0,
+          backgroundColor: Colors.pink,
+        ),
+        body: Center(
+          child: MyBox(
+            date: '23/03/24',
+            hours: '5',
+            id: '12345678',
+            time: '12pm',
+            month: 'may',
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyBox extends StatelessWidget {
+  final String date;
+  final String hours;
+  final String id;
+  final String time;
+  final String month;
+
+  MyBox({
+    required this.date,
+    required this.hours,
+    required this.id,
+    required this.time,
+    this.month = 'month',
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.black),
+        color: Colors.grey[200],
+        
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Date: 23/03/2024'),
+          Text('Hours: 5'),
+          Text('ID: 12345678'),
+          Text('Time: 12pm'),
+          Text('Month: may'),
+        ],
+      ),
+    );
+  }
+}
